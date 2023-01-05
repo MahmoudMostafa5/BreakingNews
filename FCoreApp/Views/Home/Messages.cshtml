@@ -1,0 +1,48 @@
+﻿@model List<ContactUs>
+
+<section id="testimonials" class="testimonials">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Some Message</h2>
+        </div>
+
+        @*<div class="owl-carousel testimonials-carousel owl-loaded owl-drag aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">*@
+
+    <center>
+
+
+
+
+
+
+
+
+
+
+        @foreach (var item in Model)
+        {
+
+            <div class="owl-item cloned" style="width: 80%; padding-bottom:20px">
+                <div class="testimonial-item">
+                    <p class="font-size:30px pt-2 p-0 h3">
+                        @item.Subject
+                    </p>
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        @item.Message
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <img src="~/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                    <h3>@item.Name</h3>
+                    <h4>@item.Email</h4>
+                </div>
+            </div>
+            <hr />
+        }
+
+
+    </center>
+
+    </div>
+</section>

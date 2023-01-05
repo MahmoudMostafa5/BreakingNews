@@ -1,0 +1,32 @@
+﻿@model FCoreApp.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="text-info text-center py-3">Details</h1>
+
+<div class="container">
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3"></dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-3"></dt>
+        <dt class="col-sm-3"></dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-4">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+    </dl>
+    <div class="text-center py-3">
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>

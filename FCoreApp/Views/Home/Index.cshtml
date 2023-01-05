@@ -1,0 +1,30 @@
+﻿@model List<Category>
+
+<section id="featured-services" class="featured-services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch my-5 mb-lg-0">
+                    <div class="icon-box aos-init aos-animate" style="width:100%" data-aos="fade-up" data-aos-delay="100">
+                        <center>
+                            <div class="icon"><i class="icofont-newspaper"></i></div>
+                            <h4 class="title">@item.Name</h4>
+                            <p class="description text-left pb-3">@item.Description</p>
+                            <a href="/Home/News/@item.Id" class="font-weight-bolder bx-underline text-muted font-italic" style="font-size:20px">
+                                Read More  <i class="icofont-arrow-right icofont-1x"></i>
+                            </a>
+                        </center>
+                    </div>
+                </div>
+
+            }
+
+
+        </div>
+
+    </div>
+</section>

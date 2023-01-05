@@ -1,0 +1,36 @@
+﻿@model FCoreApp.Models.TeamMember
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+
+    <h1 class="text-info text-center py-3">Details of @Model.Name</h1>
+
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Job)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Job)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+            <dd class="col-sm-10">
+                @*@Html.DisplayFor(model => model.Image)*@
+                <img src="~/Images/News/@Model.Image" class="w-25" />
+            </dd>
+        </dl>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a> |
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
